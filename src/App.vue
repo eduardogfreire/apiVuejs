@@ -8,15 +8,15 @@
     </nav>
 
     <div class="container">
-
-      <form>
+      
+      <form @submit.prevent="salvar">
 
           <label>Nome</label>
-          <input type="text" placeholder="Nome">
+          <input type="text" placeholder="Nome" v-model="produto.nome">
           <label>Quantidade</label>
-          <input type="number" placeholder="QTD">
+          <input type="number" placeholder="QTD" v-model="produto.quantidade">
           <label>Valor</label>
-          <input type="text" placeholder="Valor">
+          <input type="text" placeholder="Valor" v-model="produto.valor">
 
           <button class="waves-effect waves-light btn-small">Salvar<i class="material-icons left">save</i></button>
 
@@ -68,6 +68,12 @@
 
      data(){
       return {
+        produto: {
+          nome: '',
+          quantidade: '',
+          valor: ''
+
+        },
         produtos:[]
       }
     },
@@ -77,6 +83,18 @@
         console.log(resposta.data)
         this.produtos = resposta.data
       })
+    },
+
+    methods:{
+
+      salvar(){
+
+        Produto.salvar(this.produto).then(resposta => {
+          this.resposta = resposta
+          alert('Salvo com sucesso!!!')
+          
+        })
+      }
     }
   }
 </script>
