@@ -1,24 +1,16 @@
-# apivue
+# apivue 
 
 ## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+[x] - iniciar o projeto Vuejs ($npm create apivue)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+[x] - Estrutura do App.vue https://gist.github.com/samuelsonbrito/586862d999d61ebef2a02ae3b18b590b
 
-### Lints and fixes files
-```
-yarn lint
-```
+[x] -  remover conteudo do App.vue script e style
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[x] - Adicionando CDN materialize https://gist.github.com/samuelsonbrito/86247fc08c26363ad3988d32fdd05d7d
+
+[x] - Instalando axios ($npm install axios --save) -> adiciona dependência no package.json
+
+[x] - iniciando servidor ($npm run serve)
+
